@@ -29,7 +29,7 @@
   <script src="assets/js/index.js" defer></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-  <title>E-Ecommerce - Home</title>
+  <title>E-Ecommerce - Users</title>
 
 </head>
 
@@ -44,13 +44,13 @@
 
       <!-- MENU RESPONSIVO DENTRO DO HAMBURGUE -->
       <ul class='list menuMobile' id="menuMobile" role="menuMobile">
-        <li id="active-link-menu"><a href="index.html">Home</a></li>
+        <li id="active-link-menu"><a href="carrinho6/index.html">Home</a></li>
         <li><a href="produtos.html">Produtos</a></li>
         <li><a href="javascript:void(0)">Sobre-nós</a></li>
         <li><a href="javascript:void(0)">Contatos</a></li>
       </ul>
 
-      <!-- SISTEMA DE CARRINHO, USUARIO , E CONFIG DENTRO DA TAG NAV -->
+
       <div class="configs-menu">
         <!---- SCROLL ABRE FECHA CARRINHO ---->
         <div class="config">
@@ -119,7 +119,7 @@
             </li>
 
             <li>
-              <p><a href="cad_produto.html">Novo Produto</a></p>
+               <p><a href="cad_produto.html">Novo Produto</a></p>
             </li>
 
             <li>
@@ -175,95 +175,56 @@
 
   </header>
 
-
-  <!----------- CATALOGUE ---------->
+  <!----------- USUÁRIOS ---------->
   <section class="catalogue-initial">
-
-    <div class="titles-page">
+      <div class="titles-page">
       <h5>PRODUTOS</h5>
     </div>
-
-    
     <div class="container mt-4">
-        <h2>Cadastro de Produto</h2>
-        
-        <!-- Formulário para adicionar/editar produto -->
-        <form id="product-form" class="mb-4">
+        <h2>CADASTRO DE USUÁRIO</h2>
+        <!-- Formulário para adicionar/editar usuário -->
+        <form id="user-form" class="mb-4">
             <div class="form-group">
-                <label for="name">Nome do Produto:</label>
+                <label for="name">Nome:</label>
                 <input type="text" id="name" name="name" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="price">Preço:</label>
-                <input type="number" id="price" name="price" class="form-control" min="0" step="0.01" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary">Salvar Produto</button>
-            <input type="hidden" id="product-id">
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar Usuário</button>
+            <input type="hidden" id="user-id">
         </form>
 
         <!-- Campo de pesquisa -->
         <div class="form-group">
-            <input type="text" id="search" class="form-control" placeholder="Pesquisar produtos...">
+            <input type="text" id="search" class="form-control" placeholder="Search Users...">
         </div>
 
-        <!-- Tabela para exibir os produtos -->
-        <h2>Produtos</h2>
-        <table id="product-table" class="table">
+        <!-- Tabela para exibir os usuários -->
+        <h2>Usuários</h2>
+        <table id="user-table" class="table">
             <thead>
                 <tr>
-                    <th>Nome do Produto</th>
-                    <th>Preço</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Senha</th>
                     <th>Ações</th>
                 </tr>
             </thead>
-            <tbody id="product-list">
-                <!-- Os produtos serão adicionados aqui -->
+            <tbody id="user-list">
+                <!-- Os usuários serão adicionados aqui -->
             </tbody>
         </table>
     </div>
-         
+
+
   </section>
 
-
-
-  <!------ TIPOS DE PAGAMENTOS ----->
-  <section class="payments">
-    <div>
-
-      <section class="none-payment">
-        <h1>Melhor forma de pagar</h1>
-        <p>Fácil, prático e divertido</p>
-      </section>
-
-      <ul>
-        <li>
-          <i class="far fa-credit-card"></i>
-          <section>
-            <h3>Cartão</h3>
-            <p>Em até 12x sem juros</p>
-          </section>
-        </li>
-
-        <li>
-          <i class="fas fa-barcode"></i>
-          <section>
-            <h3>Boleto</h3>
-            <p>Escaneie na hora</p>
-          </section>
-        </li>
-
-        <li>
-          <i class="fas fa-qrcode"></i>
-          <section>
-            <h3>Via Pix</h3>
-            <p>000.000.000-00</p>
-          </section>
-        </li>
-      </ul>
-
-    </div>
-
-  </section>
 
   <!-------------- FOOTER ---------------->
   <footer>
@@ -271,7 +232,7 @@
       <div class="media">
         <div class="media-title">
           <a href="">
-            <h2><b>E</b>-Ecommerce</h2>
+            <h2><img src="assets/img/Logo-Ecommerce/logo_vermelha.png" alt="Logo E-commerce"></h2>
           </a>
         </div>
 
@@ -306,11 +267,13 @@
         <h3>Contact</h3>
         <ul>
           <li><a href="tel:+551234567890">+55 12 3456 7890</a></li>
-          <li><a href="e-ecommerce@gmail.com">ecommerce@gmail.com</a></li>
+          <li><a href="ecommerce@gmail.com">ecommerce@gmail.com</a></li>
           <li><a href="#">Rua Principal, 123. Cidade - ET</a></li>
         </ul>
       </div>
+
     </div>
+
     <div class="copyright">
       <p>Termos, acordos e Política de Privacidade.</p>
       <p>© 2022 Dev Project. Todos os direitos reservados.</p>
@@ -331,129 +294,130 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-  
-
     <script>
-        // Função para salvar ou atualizar um produto
-        document.getElementById('product-form').addEventListener('submit', function(event) {
+        // Função para salvar ou atualizar um usuário
+        document.getElementById('user-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            var productName = document.getElementById('name').value;
-            var productPrice = document.getElementById('price').value;
-            var productId = document.getElementById('product-id').value;
+            var userName = document.getElementById('name').value;
+            var userEmail = document.getElementById('email').value;
+            var userPassword = document.getElementById('password').value;
+            var userId = document.getElementById('user-id').value;
 
-            if (productId) {
-                // Atualiza o produto existente
-                updateProduct(productId, productName, productPrice);
+            if (userId) {
+                // Atualiza o usuário existente
+                updateUser(userId, userName, userEmail, userPassword);
             } else {
-                // Adiciona um novo produto
-                addProduct(productName, productPrice);
+                // Adiciona um novo usuário
+                addUser(userName, userEmail, userPassword);
             }
 
-            // Limpa o formulário após adicionar/editar o produto
-            document.getElementById('product-form').reset();
+            // Limpa o formulário após adicionar/editar o usuário
+            document.getElementById('user-form').reset();
         });
 
-        // Função para adicionar um novo produto
-        function addProduct(name, price) {
-            var products = JSON.parse(localStorage.getItem('products')) || [];
-            var newProduct = {
-                id: generateProductId(), // Gera um ID único
+        // Função para adicionar um novo usuário
+        function addUser(name, email, password) {
+            var users = JSON.parse(localStorage.getItem('users')) || [];
+            var newUser = {
+                id: generateUserId(), // Gera um ID único
                 name: name,
-                price: price
+                email: email,
+                password: password
             };
-            products.push(newProduct);
-            localStorage.setItem('products', JSON.stringify(products));
-            showProducts();
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+            showUsers();
         }
 
-        // Função para atualizar um produto existente
-        function updateProduct(id, name, price) {
-            var products = JSON.parse(localStorage.getItem('products')) || [];
-            for (var i = 0; i < products.length; i++) {
-                if (products[i].id === id) {
-                    products[i].name = name;
-                    products[i].price = price;
+        // Função para atualizar um usuário existente
+        function updateUser(id, name, email, password) {
+            var users = JSON.parse(localStorage.getItem('users')) || [];
+            for (var i = 0; i < users.length; i++) {
+                if (users[i].id === id) {
+                    users[i].name = name;
+                    users[i].email = email;
+                    users[i].password = password;
                     break;
                 }
             }
-            localStorage.setItem('products', JSON.stringify(products));
-            showProducts();
+            localStorage.setItem('users', JSON.stringify(users));
+            showUsers();
         }
 
-        // Função para excluir um produto
-        function deleteProduct(id) {
-            var products = JSON.parse(localStorage.getItem('products')) || [];
-            var updatedProducts = products.filter(function(product) {
-                return product.id !== id;
+        // Função para excluir um usuário
+        function deleteUser(id) {
+            var users = JSON.parse(localStorage.getItem('users')) || [];
+            var updatedUsers = users.filter(function(user) {
+                return user.id !== id;
             });
-            localStorage.setItem('products', JSON.stringify(updatedProducts));
-            showProducts();
+            localStorage.setItem('users', JSON.stringify(updatedUsers));
+            showUsers();
         }
 
-        // Função para exibir os produtos na tabela
-        function showProducts() {
-            var products = JSON.parse(localStorage.getItem('products')) || [];
-            var productList = document.getElementById('product-list');
-            productList.innerHTML = '';
+        // Função para exibir os usuários na tabela
+        function showUsers() {
+            var users = JSON.parse(localStorage.getItem('users')) || [];
+            var userList = document.getElementById('user-list');
+            userList.innerHTML = '';
 
-            for (var i = 0; i < products.length; i++) {
-                var product = products[i];
+            for (var i = 0; i < users.length; i++) {
+                var user = users[i];
                 var row = '<tr>';
-                row += '<td>' + product.name + '</td>';
-                row += '<td>' + product.price + '</td>';
-                row += '<td><button type="button" class="btn btn-primary btn-sm" onclick="editProduct(\'' + product.id + '\')">Editar</button>';
-                row += '<button type="button" class="btn btn-danger btn-sm ml-2" onclick="deleteProduct(\'' + product.id + '\')">Excluir</button></td>';
+                row += '<td>' + user.name + '</td>';
+                row += '<td>' + user.email + '</td>';
+                row += '<td>' + user.password + '</td>';
+                row += '<td><button type="button" class="btn btn-primary btn-sm" onclick="editUser(\'' + user.id + '\')">Editar</button>';
+                row += '<button type="button" class="btn btn-danger btn-sm ml-2" onclick="deleteUser(\'' + user.id + '\')">Excluir</button></td>';
                 row += '</tr>';
-                productList.innerHTML += row;
+                userList.innerHTML += row;
             }
         }
 
         // Função para editar um usuário
-        function editProduct(id) {
-            var products = JSON.parse(localStorage.getItem('products')) || [];
-            for (var i = 0; i < products.length; i++) {
-                if (products[i].id === id) {
-
-
-                    document.getElementById('name').value = products[i].name;
-                    document.getElementById('price').value = products[i].price;
-                    document.getElementById('product-id').value = products[i].id;
+        function editUser(id) {
+            var users = JSON.parse(localStorage.getItem('users')) || [];
+            for (var i = 0; i < users.length; i++) {
+                if (users[i].id === id) {
+                    document.getElementById('name').value = users[i].name;
+                    document.getElementById('email').value = users[i].email;
+                    document.getElementById('password').value = users[i].password;
+                    document.getElementById('user-id').value = users[i].id;
                     break;
                 }
             }
         }
 
-        // Função para gerar um ID único para os produtos
-        function generateProductId() {
+        // Função para gerar um ID único para os usuários
+        function generateUserId() {
             return '_' + Math.random().toString(36).substr(2, 9);
         }
-
-        // Função para filtrar os produtos conforme a pesquisa
+         // Função para filtrar os produtos conforme a pesquisa
         document.getElementById('search').addEventListener('input', function() {
             var searchTerm = this.value.toLowerCase();
-            var products = JSON.parse(localStorage.getItem('products')) || [];
-            var filteredProducts = products.filter(function(product) {
-                return product.name.toLowerCase().includes(searchTerm);
+            var users = JSON.parse(localStorage.getItem('users')) || [];
+            var filteredProducts = users.filter(function(users) {
+                return users.name.toLowerCase().includes(searchTerm);
             });
-            var productList = document.getElementById('product-table');
+            var productList = document.getElementById('user-list');
             productList.innerHTML = '';
 
             for (var i = 0; i < filteredProducts.length; i++) {
-                var product = filteredProducts[i];
+                var users = filteredProducts[i];
                 var row = '<tr>';
-                row += '<td>' + product.name + '</td>';
-                row += '<td>' + product.price + '</td>';
-                row += '<td><button type="button" class="btn btn-primary btn-sm" onclick="editProduct(\'' + product.id + '\')">Editar</button>';
-                row += '<button type="button" class="btn btn-danger btn-sm ml-2" onclick="deleteProduct(\'' + product.id + '\')">Excluir</button></td>';
+                row += '<td>' + users.name + '</td>';
+                row += '<td>' + users.email + '</td>';
+                row += '<td>' + users.password + '</td>';
+                row += '<td><button type="button" class="btn btn-primary btn-sm" onclick="editUser(\'' + users.id + '\')">Editar</button>';
+                row += '<button type="button" class="btn btn-danger btn-sm ml-2" onclick="deleteUser(\'' + users.id + '\')">Excluir</button></td>';
                 row += '</tr>';
                 productList.innerHTML += row;
             }
         });
 
-        // Exibe os produtos na tabela ao carregar a página
-        showProducts();
-    </script>
+        // Exibe os usuários na tabela ao carregar a página
+        showUsers();
+  </script>
 </body>
 
 </html>

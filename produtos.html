@@ -188,17 +188,6 @@
         <div>
           <input id="search-input" type="search" placeholder="Buscar produtos...">
           <i class="fas fa-search"></i>
-          <table id="data-table" class="table table-hover">
-              <thead>
-                  <tr>
-                      <th>Chave</th>
-                      <th>Valor</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <!-- Dados serão exibidos aqui -->
-              </tbody>
-          </table>
         </div>
 
         <div class="frete">
@@ -505,7 +494,7 @@
                 var name = userData.e;
                 var email = userData.s;
 
-                var tableBody = document.getElementById('data-table');
+                var tableBody = document.getElementById('data-table1');
                 var row = tableBody.insertRow();
                 var cell1 = row.insertCell(0);
                 var cell2 = row.insertCell(1);
